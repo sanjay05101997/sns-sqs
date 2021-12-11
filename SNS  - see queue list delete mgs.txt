@@ -1,0 +1,37 @@
+{
+  "Id": "Policy1639206858860",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1639206755554",
+      "Action": [
+        "sqs:CreateQueue",
+        "sqs:DeleteMessage"
+      ],
+      "Effect": "Allow",
+      "Resource": "*",
+      "Principal": {
+        "AWS": [
+          "user"
+        ]
+      }
+    },
+    {
+      "Sid": "Stmt1639206857066",
+      "Action": [
+        "sqs:AddPermission",
+        "sqs:ChangeMessageVisibility",
+        "sqs:GetQueueUrl",
+        "sqs:ListQueues",
+        "sqs:RemovePermission"
+      ],
+      "Effect": "Allow",
+      "Resource": "*",
+      "Principal": {
+        "AWS": [
+          "user"
+        ]
+      }
+    }
+  ]
+}
